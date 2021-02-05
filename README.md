@@ -18,7 +18,3 @@ OR if you use Arch Linux you can build the package using [AUR](https://aur.archl
 ```bash
 bruh
 ```
-
-## Note
-
-If ALSA is not properly configured on your device, the program will not work.
