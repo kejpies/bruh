@@ -3,7 +3,7 @@ CFLAGS +=
 LDFLAGS +=
 
 TARGET = bruh
-SRC = bruh.c
+SRC = bruh.c bruh_sound.h
 OBJ = $(SRC:.c=.o)
 
 DESTDIR ?=
