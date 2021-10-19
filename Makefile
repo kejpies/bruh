@@ -3,7 +3,7 @@ CFLAGS +=
 LDFLAGS +=
 
 TARGET = bruh
-SRC = bruh.c
+SRC = bruh.c bruh_sound.h
 OBJ = $(SRC:.c=.o)
 
 DESTDIR ?=
@@ -23,13 +23,11 @@ $(TARGET): $(OBJ)
 
 install: $(TARGET)
 	install -D $(TARGET) -t ${BINDIR}
-	install -Dm 644 $(TARGET).wav -t ${DATADIR}
 	install -Dm 644 $(TARGET).1 -t ${MANDIR}/man1
 	@echo bruh
 
 uninstall:
 	$(RM) ${BINDIR}/${TARGET}
-	$(RM) ${DATADIR}/${TARGET}.wav
 	$(RM) ${MANDIR}/man1/${TARGET}.1
 	@echo bruh
 
