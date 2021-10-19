@@ -44,7 +44,7 @@ void bruh(void){
 	FILE* stream = popen("aplay -f dat &> /dev/null","w");
 
 	if (NULL == stream) stream = popen("paplay &> /dev/null","w");
-	if (NULL == stream) printf(strerror(errno));
+	if (NULL == stream) printf("%s",strerror(errno));
 
 	fwrite(bruh_bytes, sizeof(char), bruh_len, stream);
 	pclose(stream);
